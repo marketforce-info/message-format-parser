@@ -4,7 +4,7 @@ namespace MarketforceInfo\MessageFormatParser\Argument\Option;
 
 use MarketforceInfo\MessageFormatParser\Exceptions\SyntaxException;
 
-class SelectMatches extends AbstractMatches implements Option
+class SelectMatches extends AbstractMatches
 {
     protected function validate(): void
     {

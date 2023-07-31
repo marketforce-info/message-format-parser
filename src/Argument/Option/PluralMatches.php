@@ -4,7 +4,7 @@ namespace MarketforceInfo\MessageFormatParser\Argument\Option;
 
 use MarketforceInfo\MessageFormatParser\Exceptions\SyntaxException;
 
-class PluralMatches extends AbstractMatches implements Option
+class PluralMatches extends AbstractMatches
 {
     private array $validOptions = [
         'zero',

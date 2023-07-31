@@ -48,7 +48,7 @@ Contributions gratefully accepted in the form issues or PRs.
 
 ## Security
 
-If you discover any security related issues, please email darkghosthunter@gmail.com instead of using the issue tracker.
+If you discover any security related issues, please email appsupport_uk@marketforce.com instead of using the issue tracker.
 
 ## License
 

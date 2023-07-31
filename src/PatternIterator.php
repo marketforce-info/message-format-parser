@@ -56,7 +56,11 @@ class PatternIterator implements \Iterator
         if ($this->current() === '{') {
             $this->next();
         }
-        return $this->fetchUntil('}');
+        $block = $this->fetchUntil('}');
+        if ($this->current() === '}') {
+            $this->next();
+        }
+        return $block;
     }
 
     public function fetchUntil(string $stopCharacter): string

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace MarketforceInfo\MessageFormatParser\Argument;
@@ -15,8 +16,9 @@ use MarketforceInfo\MessageFormatParser\PatternIterator;
 
 class OptionsParser
 {
-    public function __construct(private readonly Format $format)
-    {
+    public function __construct(
+        private readonly Format $format
+    ) {
     }
 
     public function parse(string $options): array|\IteratorAggregate
@@ -76,7 +78,7 @@ class OptionsParser
         }
 
         if (!in_array($style, $validValues, true)) {
-            throw new SyntaxException("Invalid $type style '$style'");
+            throw new SyntaxException("Invalid {$type} style '{$style}'");
         }
 
         return [new GenericOption($style)];

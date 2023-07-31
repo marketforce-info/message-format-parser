@@ -19,7 +19,7 @@ class SelectMatches extends AbstractMatches
             }
 
             if (isset($matches[$option->match])) {
-                throw new SyntaxException("Duplicate select match value '$option->match'");
+                throw new SyntaxException("Duplicate select match value '{$option->match}'");
             }
             $matches[$option->match] = true;
         }

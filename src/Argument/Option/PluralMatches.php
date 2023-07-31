@@ -23,10 +23,10 @@ class PluralMatches extends AbstractMatches
                 $hasOther = true;
             } elseif (str_starts_with($option->match, '=')) {
                 if (!is_numeric(substr($option->match, 1))) {
-                    throw new SyntaxException("Invalid numeric plural match value '$option->match'");
+                    throw new SyntaxException("Invalid numeric plural match value '{$option->match}'");
                 }
             } elseif (!in_array($option->match, $this->validOptions, true)) {
-                throw new SyntaxException("Invalid plural match value '$option->match'");
+                throw new SyntaxException("Invalid plural match value '{$option->match}'");
             }
 
             if (empty($option->expression->children)) {
@@ -34,7 +34,7 @@ class PluralMatches extends AbstractMatches
             }
 
             if (isset($matches[$option->match])) {
-                throw new SyntaxException("Duplicate plural match value '$option->match'");
+                throw new SyntaxException("Duplicate plural match value '{$option->match}'");
             }
             $matches[$option->match] = true;
         }

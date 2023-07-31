@@ -7,7 +7,9 @@ use Traversable;
 
 abstract class AbstractMatches implements \Countable, \IteratorAggregate, \ArrayAccess
 {
-    public function __construct(public readonly array $options) {
+    public function __construct(
+        public readonly array $options
+    ) {
         $this->validate();
     }
 

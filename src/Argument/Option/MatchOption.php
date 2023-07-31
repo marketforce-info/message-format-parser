@@ -8,8 +8,11 @@ use MarketforceInfo\MessageFormatParser\Token\Pattern;
 class MatchOption
 {
     public readonly Pattern $expression;
-    public function __construct(public readonly string $match, string $expression)
-    {
+
+    public function __construct(
+        public readonly string $match,
+        string $expression
+    ) {
         $this->expression = (new Parser())->parse($expression);
     }
 }

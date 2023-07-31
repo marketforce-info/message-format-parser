@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace MarketforceInfo\MessageFormatParser;
@@ -47,7 +48,7 @@ class Parser
         }
 
         if ($character !== '}') {
-            throw new SyntaxException("Missing closing brace from argument '$parameters[0]'");
+            throw new SyntaxException("Missing closing brace from argument '{$parameters[0]}'");
         }
 
         if (isset($parameters[1])) {
@@ -81,7 +82,7 @@ class Parser
     {
         $instance = Format::tryFrom(trim($format));
         if (!$instance instanceof Format) {
-            throw new SyntaxException("Invalid argument format '$format'");
+            throw new SyntaxException("Invalid argument format '{$format}'");
         }
         return $instance;
     }

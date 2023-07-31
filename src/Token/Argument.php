@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace MarketforceInfo\MessageFormatParser\Token;
@@ -12,10 +13,9 @@ class Argument
         public readonly string $name,
         public readonly Format $format = Format::none,
         public readonly array $options = []
-    )
-    {
+    ) {
         if (!preg_match('/^\w+$/', $name)) {
-            throw new SyntaxException("Invalid argument name: $name");
+            throw new SyntaxException("Invalid argument name: {$name}");
         }
     }
 }

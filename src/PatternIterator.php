@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace MarketforceInfo\MessageFormatParser;
@@ -6,7 +7,9 @@ namespace MarketforceInfo\MessageFormatParser;
 class PatternIterator implements \Iterator
 {
     private readonly string $pattern;
+
     private readonly int $length;
+
     private int $index = 0;
 
     public function __construct(string $pattern)

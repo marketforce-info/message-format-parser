@@ -60,7 +60,7 @@ class ParserTest extends TestCase
         $ast = $parser->parse("Your name is '{first} {last}'");
 
         $this->assertCount(1, $ast->children);
-        $this->assertEquals("Your name is {first} {last}", $ast->children[0]->value);
+        $this->assertEquals('Your name is {first} {last}', $ast->children[0]->value);
     }
 
     public function testParsesLiteralWithDoubleApostrophe()

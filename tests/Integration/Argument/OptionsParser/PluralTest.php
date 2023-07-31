@@ -92,7 +92,7 @@ class PluralTest extends TestCase
     public function testValidMatches(string $match)
     {
         $options = $this->parser->parse("
-            $match {There are no apples}
+            {$match} {There are no apples}
             other {There are # apples!}
         ");
         $this->assertCount(2, $options);
